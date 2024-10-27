@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  tls-fingerprints:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../pcaps:/app/pcaps
+      - ../json_fingerprints:/app/json_fingerprints
+
